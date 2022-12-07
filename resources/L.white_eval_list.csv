@@ -1,0 +1,8 @@
+subject_id,surface_id,gt_mesh_path,pred_mesh_path
+143325,L.white,/mnt/yaplab/data/junjiez/HCP_TRT/143325/T1w/Native/143325.L.white.surf.vtk,/mnt/yaplab/data/junjiez/corticalflow_results/predict_debug/143325/143325_L_white_Df2.stl
+149337,L.white,/mnt/yaplab/data/junjiez/HCP_TRT/149337/T1w/Native/149337.L.white.surf.vtk,/mnt/yaplab/data/junjiez/corticalflow_results/predict_debug/149337/149337_L_white_Df2.stl
+169343,L.white,/mnt/yaplab/data/junjiez/HCP_TRT/169343/T1w/Native/169343.L.white.surf.vtk,/mnt/yaplab/data/junjiez/corticalflow_results/predict_debug/169343/169343_L_white_Df2.stl
+200614,L.white,/mnt/yaplab/data/junjiez/HCP_TRT/200614/T1w/Native/200614.L.white.surf.vtk,/mnt/yaplab/data/junjiez/corticalflow_results/predict_debug/200614/200614_L_white_Df2.stl
+287248,L.white,/mnt/yaplab/data/junjiez/HCP_TRT/287248/T1w/Native/287248.L.white.surf.vtk,/mnt/yaplab/data/junjiez/corticalflow_results/predict_debug/287248/287248_L_white_Df2.stl
+341834,L.white,/mnt/yaplab/data/junjiez/HCP_TRT/341834/T1w/Native/341834.L.white.surf.vtk,/mnt/yaplab/data/junjiez/corticalflow_results/predict_debug/341834/341834_L_white_Df2.stl
+601127,L.white,/mnt/yaplab/data/junjiez/HCP_TRT/601127/T1w/Native/601127.L.white.surf.vtk,/mnt/yaplab/data/junjiez/corticalflow_results/predict_debug/601127/601127_L_white_Df2.stl
