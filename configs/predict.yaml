@@ -1,0 +1,48 @@
+# pass via CLI to override configurations
+user_config: null
+
+# input configuration
+inputs:
+  # type of input ['list', 'file', 'formatted']
+  data_type: formatted
+  # formatted dataset path, path to a text file or path to a mri
+  path: /mnt/yaplab/data/junjiez/HCP_TRT/
+  # unique id for the input mri or a split
+  split_name: test
+  # split map
+  split_file: /home/junjiez1/projects/corticalflow/resources/hcp_split.csv
+  # hemisphere sufix [lh or rh]
+  hemisphere: 'R'
+  # ex: cuda:0
+  device: 'cuda:0'
+  # templates used to train the model.
+  template: /home/junjiez1/projects/corticalflow/resources/my_templates/R.white_435k.ply
+
+# Cortical model configuration
+white_model:
+  # number of feature channels and down/up sampling for each deformation
+  nb_features: [[[16, 32, 32, 32],[32, 32, 32, 32, 32, 16, 16]], [[16, 32],[32, 32, 16, 16]], [[16, 32], [32, 32, 16, 16]]]
+  # Integration method used (NeurIPS, Euler, RK4, null (no integration is performed))
+  integration_method: 'RK4'
+  # integration steps
+  integration_steps: 30
+  # use predicted flow as input for the next deformation
+  share_flows: True
+  # model weights checkpoint
+  model_checkpoint: /mnt/yaplab/data/junjiez/corticalflow_results/tuning6/best_model_DT2.pth
+
+pial_model: null
+
+outputs:  
+  # output directory
+  output_dir: /mnt/yaplab/data/junjiez/corticalflow_results/r_white/
+  # save predictions after which deformations
+  out_deform: [0, 1, 2]
+  # output mesh format to use [stl, freesurfer, or npz]
+  out_format: stl
+
+# hydra configurations and log files
+hydra:
+  run:
+    dir: ${outputs.output_dir}
+  output_subdir: null
